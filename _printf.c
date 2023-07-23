@@ -10,11 +10,11 @@ int _printf(const char *format, ...)
 	unsigned int i;
 	va_list _ptr;
 	handle_s_t s[] = {
-		{'c', h_char},
-		{'s', h_string},
-		{'%', h_percentage},
+		{'c', h_char}, {'s', h_string}, {'%', h_percentage},
 		{'!', h_Exclamation_mark},
-		{'K', h_ltr_K}
+		{'K', h_ltr_K},
+		{'d', h_integer},
+		{'i', h_integer}
 	};
 	if (format == NULL || (*format == '%' && *(format + 1) == '\0'))
 		return (-1);
