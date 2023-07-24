@@ -1,6 +1,31 @@
 #include "main.h"
 
 /**
+ *h_binary - handle with binary number
+ *@_ptr: pointeur to an argument
+ *Return: len
+ */
+int h_binary(va_list _ptr)
+{
+	unsigned int len = 0, i = 0, binary_num = va_arg(_ptr, int);
+	char binary[26];
+
+	do {
+		binary[i++] = binary_num % 2 + 48;
+		binary_num /= 2;
+	} while (binary_num != 0);
+
+	binary[i] = '\0';
+
+	len = strlen(binary);
+
+	do {
+		write(1, &binary[--i], 1);
+	} while (i != 0);
+	return (len);
+}
+
+/**
  *h_integer - handle with integer number
  *@_ptr: pointeur to an argument
  *Return: len

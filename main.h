@@ -25,5 +25,6 @@ int h_Exclamation_mark(va_list);
 int h_ltr_K(va_list __attribute__((__unused__)) _ptr);
 int h_integer(va_list _ptr);
 int write_sp_f(va_list _ptr, char chars);
+int h_binary(va_list _ptr);
 
 #endif /*MAIN_H*/

@@ -4,20 +4,17 @@ int printf ( const char * format, ... );
 
 Print formatted data to stdout
 
-Writes the C string pointed by _format_ to the standard output ([stdout](https://cplusplus.com/stdout)). If _format_ includes _format specifiers_ (subsequences beginning with %), the additional arguments following _format_ are formatted and inserted in the resulting string replacing their respective specifiers.  
-
-  
+Writes the C string pointed by _format_ to the standard output ([stdout](https://cplusplus.com/stdout)). If _format_ includes _format specifiers_ (subsequences beginning with %), the additional arguments following _format_ are formatted and inserted in the resulting string replacing their respective specifiers.
 
 ### Parameters
 
 format
 
-C string that contains the text to be written to [stdout](https://cplusplus.com/stdout).  
-It can optionally contain embedded _format specifiers_ that are replaced by the values specified in subsequent additional arguments and formatted as requested.  
-  
-A _format specifier_ follows this prototype: 
-   - %[flags][width][.precision][length]specifier]  
-Where the _specifier character_ at the end is the most significant component, since it defines the type and the interpretation of its corresponding argument:  
+C string that contains the text to be written to [stdout](https://cplusplus.com/stdout).
+It can optionally contain embedded _format specifiers_ that are replaced by the values specified in subsequent additional arguments and formatted as requested.
+A _format specifier_ follows this prototype:
+- %[flags][width][.precision][length]specifier]
+Where the _specifier character_ at the end is the most significant component, since it defines the type and the interpretation of its corresponding argument:
 
 |_specifier_|Output|Example|
 |---|---|---|

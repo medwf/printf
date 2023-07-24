@@ -14,7 +14,7 @@ int write_sp_f(va_list _ptr, char chars)
 	handle_s_t s[] = {
 		{'c', h_char}, {'s', h_string}, {'%', h_percentage},
 		{'!', h_Exclamation_mark}, {'K', h_ltr_K}, {'d', h_integer},
-		{'i', h_integer}
+		{'i', h_integer}, {'b', h_binary}
 		};
 
 	while (i < sizeof(s) / sizeof(s[0]))
