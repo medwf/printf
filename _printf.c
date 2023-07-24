@@ -6,16 +6,10 @@
  */
 int _printf(const char *format, ...)
 {
+	char chars;
 	int len_string = 0;
-	unsigned int i;
 	va_list _ptr;
-	handle_s_t s[] = {
-		{'c', h_char}, {'s', h_string}, {'%', h_percentage},
-		{'!', h_Exclamation_mark},
-		{'K', h_ltr_K},
-		{'d', h_integer},
-		{'i', h_integer}
-	};
+
 	if (format == NULL || (*format == '%' && *(format + 1) == '\0'))
 		return (-1);
 
@@ -25,16 +19,8 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			i = 0;
-			while (i < sizeof(s) / sizeof(s[0]))
-			{
-				if (*format == s[i].sp_f)
-				{
-					len_string += s[i].f(_ptr);
-					break;
-				}
-				i++;
-			}
+			chars = *format;
+			len_string += write_sp_f(_ptr, chars);
 		}
 		else
 		{
